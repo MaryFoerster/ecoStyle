@@ -1,0 +1,137 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 7rem;
+}
+img {
+    border-radius: 0.5rem;
+}
+.end {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+button {
+  background-color: #3b343b;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* Font */
+
+@font-face {
+  font-family:'OpenSans', Arial, Helvetica, sans-serif;
+  src: url(font/OpenSans.ttf) format(truetype);
+  src: url(font/OpenSansBold.ttf) format(truetype);
+}
+
+@font-face {
+  font-family:'OpenSansBold', Arial, Helvetica, sans-serif;
+  src: url(font/OpenSansBold.ttf) format(truetype);
+}
+
+@font-face {
+  font-family:'Oswald', Arial, Helvetica, sans-serif;
+  src: url(font/Oswald-Bold.ttf) format(truetype);
+}
+
+h1, .h1 {
+  font-family: 'Oswald';
+  color:black;
+}
+h2, .h2 {
+  font-family: 'Oswald';
+  color: black;
+}
+h3, .h3 {
+  font-family: 'Oswald';
+  color: black;
+}
+h4, .h4 {
+  font-family: 'Oswald';
+  color: black;
+}
+h5, .h5 {
+  font-family: 'Oswald';
+  color: black;
+}
+
+p, .p {
+  font-size: .9rem;
+  font-family: 'OpenSans', Arial, Helvetica, sans-serif;
+  line-height:26px ;
+  letter-spacing: 5%;
+}
+a {
+  font-size: 20px;
+  font-family: 'Oswald';
+  text-decoration: none;
+  color: white;
+ }
+ a:hover{
+  opacity: 0.5;
+ }
+ @media  screen and (min-width:800px){
+  a {
+    font-size: 17px;
+    font-family: 'Oswald';
+    text-decoration: none;
+    color: white;
+   }
+ }
+ /* body { */
+  /* cursor: url("../img/cursor.png") 8 8, pointer;
+  cursor: url("../img/cursor.svg") 8 8, pointer;
+  cursor: image-set(url("../img/cursor.png") 1x, url("../img/cursor@2x.png") 2x) 8 8, pointer;
+  cursor: -webkit-image-set(url("../img/cursor.png") 1x, url("../img/cursor@2x.png") 2x) 8 8, pointer; */
+/* } */
+
+:root {
+  --scrollbarBG: white;
+  --scrollbarKnop: black;
+}
+
+html::-webkit-scrollbar{
+  width: 6px;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbarKnop) var(--scrollbarBG);
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbarKnop);
+  border-radius: 0;
+  border: none;
+}
