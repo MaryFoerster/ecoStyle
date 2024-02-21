@@ -13,7 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 7rem;
+    margin-top: 5rem;
 }
 img {
     border-radius: 0.5rem;
@@ -61,32 +61,38 @@ button:hover {
   src: url(font/Oswald-Bold.ttf) format(truetype);
 }
 
-h1, .h1 {
+h1 {
   font-family: 'Oswald';
   color:black;
+  margin: 0;
+  padding: 0;
 }
-h2, .h2 {
+h2 {
   font-family: 'Oswald';
   color: black;
 }
-h3, .h3 {
+h3 {
   font-family: 'Oswald';
   color: black;
 }
-h4, .h4 {
+h4 {
   font-family: 'Oswald';
   color: black;
+  margin: 0;
+  padding: 0;
 }
-h5, .h5 {
+h5 {
   font-family: 'Oswald';
   color: black;
 }
 
-p, .p {
-  font-size: .9rem;
+p {
+  font-size: 16px;
   font-family: 'OpenSans', Arial, Helvetica, sans-serif;
   line-height:26px ;
   letter-spacing: 5%;
+  padding: 0;
+  margin: 0;
 }
 a {
   font-size: 20px;
