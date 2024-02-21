@@ -1,3 +1,28 @@
+/* -------------------container_h1 */
+.container_h1 {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+@media screen and (min-width:900px) {
+    .container_h1 {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .container_box1_h1 {
+        width: 62rem;
+    }
+}
+/* -------------------container_h1 */
+
+
 
 /* -------------------container_1 */
 .container_1 {
@@ -38,7 +63,6 @@
     
 /* -------------------container_2 */
 .container_2 {
-    margin-bottom: 2rem;
     width: 90%;
     display: flex;
     justify-content: center;
@@ -57,10 +81,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 3rem;
 }
 @media screen and (min-width:900px) {
     .container_2 {
         width: 75%;
+        margin-bottom: 5rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -164,18 +190,21 @@
 }
 /* -------------------container_3 */
   
-/* -------------------container_produkte */
-.container_produkte {
+
+
+/* -------------------container_produkte_left */
+.container_produkte_left {
     width: 90%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    
 }
-.container_produkte img {
+.container_produkte_left img {
     width: 27rem;
 }
-.container_produkte_box2 {
+.container_produkte_box2_left {
     width: 27rem;
     height: 27rem;
     display: flex;
@@ -184,18 +213,18 @@
     padding-left: 1rem;
     padding-right: 1rem;
 }
-@media screen and (min-width: 920px) {
-    .container_produkte {
+@media screen and (min-width: 1050px) {
+    .container_produkte_left {
         width: 90%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row;
     }
-    .container_produkte img {
+    .container_produkte_left img {
         width: 30rem;
     }
-    .container_produkte_box2 {
+    .container_produkte_box2_left {
         width: 30rem;
         height: 30rem;
         display: flex;
@@ -204,7 +233,50 @@
         padding-left: 1rem;
     }
     }
-/* -------------------container_produkte */
+/* -------------------container_produkte_left */
+
+/* -------------------container_produkte_right */
+.container_produkte_right {
+    width: 90%;
+    gap: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.container_produkte_right img {
+    width: 27rem;
+}
+.container_produkte_box2_right {
+    width: 27rem;
+    height: 27rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+@media screen and (min-width: 1050px) {
+    .container_produkte_right {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    .container_produkte_right img {
+        width: 30rem;
+    }
+    .container_produkte_box2_right {
+        width: 30rem;
+        height: 30rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding-left: 1rem;
+    }
+    }
+/* -------------------container_produkte_right */
 
 /* -------------------container_space */
 .container_space {
@@ -246,6 +318,7 @@
     }
     }
 /* -------------------container_space */
+
 
 /* -------------------container_ueberUns */
 .container_ueberUns {
@@ -607,60 +680,251 @@ footer {
 /* -------------------container_kontakt */
 
 
-
-
-
-
-ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  ul li {
-    list-style: none;
-    margin: 0 15px;
-  }
-  
-  ul li a {
-    position: relative; 
-    display: block;
-    width: 60px;
-    height: 60px;
-    text-align: center;
-    line-height: 63px;
-    background: #333;
-    border-radius: 50%;
-    font-size: 30px;
-    color: #666;
-    transition: .5s;
-  }
-  
-  ul li a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+/* --------------------------------------------shop_container_alle1*/
+.shop_container_alle1 {
     width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: #ffee10;
-    transition: .5s;
-    transform: scale(.9);
-    z-index: -1;
-  }
-  
-  ul li a:hover::before {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px #ffee10;
-  }
-  
-  ul li a:hover {
-    color: #ffee10;
-    box-shadow: 0 0 5px #ffee10;
-    text-shadow: 0 0 5px #ffee10;
-  }
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container_onlineShop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+.onlineShop__item1 {
+    margin-bottom: 1rem;
+}
+.onlineShop__item1 img {
+    width: 25rem;
+}
+.onlineShop__item2 {
+    margin-bottom: 1rem;
+}
+.onlineShop__item3 {
+    margin-bottom: 1rem;
+}
+.onlineShop__item4 {
+    margin-bottom: 1rem;
+}
+.onlineShop__item4 input {
+    padding: 1rem;
+    border: none;
+    border: solid 1px rgba(0, 0, 0, 0.76);
+    border-radius: 9px;
+}
+.onlineShop__item5 {
+    margin-bottom: 1rem;
+}
+   @media screen and (min-width:1040px) {
+        .container_onlineShop {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            width:60rem;
+            margin-bottom: 3rem;
+        }
+        .onlineShop__item1 {
+            margin-bottom: 1rem;
+        }
+        .onlineShop__item1 img {
+            width: 25rem;
+        }
+        .onlineShop__item2 {
+            margin-bottom: 1rem;
+        }
+        .onlineShop__item3 {
+            margin-bottom: 1rem;
+        }
+        .onlineShop__item4 {
+            margin-bottom: 1rem;
+        }
+        .onlineShop__item4 input {
+            padding: 1rem;
+            border: none;
+            border: solid 1px rgba(0, 0, 0, 0.76);
+            border-radius: 9px;
+        } 
+        .onlineShop__item5 {
+            margin-bottom: 1rem;
+        }
+    }
+/* --------------------------------------------shop_container_alle1*/
+
+
+
+/* --------------------------------------------shop_container_alle2 */
+.shop_container_alle2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container_onlineShop2 {
+    width: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container_onlineShop3 {
+    width: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.shop__item2_1 {
+    margin-bottom: 1rem;
+}
+.shop__item2_2 {
+    margin-bottom: 1rem;
+}
+.shop__item2_3 {
+    margin-bottom: 5rem;
+}
+.shop__item3_2 {
+    margin-bottom: 1rem;
+}
+.shop__item3_4 {
+    margin-bottom: 1rem;
+}
+@media screen and (min-width:1040px) {
+    .shop_container_alle2 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .container_onlineShop2 {
+        width: 60rem;
+        display: flex;
+        align-items: end;
+        flex-direction: column;
+    }
+    .container_onlineShop3 {
+        width: 60rem;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+    }
+    .shop__item2_1 {
+        margin-bottom: 1rem;
+    }
+    .shop__item2_2 {
+        margin-bottom: 1rem;
+    }
+    .shop__item2_3 {
+        margin-bottom: 0rem;
+    }
+    .shop__item3_2 {
+        margin-bottom: 1rem;
+    }
+    .shop__item3_4 {
+        margin-bottom: 1rem;
+    }
+}
+
+/* --------------------------------------------shop_container_alle2 */
+
+
+
+/* -------------------------------------------- kontaktEmail__containerbox */
+
+.kontaktEmail__containerbox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5rem;
+    background-color: rgba(0, 0, 0, 0.239);
+    border-radius: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 4rem;
+}
+.kontaktEmail__containerbox h2 {
+    color: white;
+}
+.kontaktEmail__containerbox p {
+    color: white;
+}
+.kontaktEmail__containerbox input {
+    padding: 0.5rem;
+    width: 20rem;
+    border-radius: 9px;
+    border: none;
+    border: solid 1px rgba(0, 0, 0, 0.76);
+}
+.kontaktEmail__containerbox textarea {
+    padding: 0.5rem;
+    width: 20rem;
+    border-radius: 9px;
+    height: 10rem;
+    border: none;
+    border: solid 1px rgba(0, 0, 0, 0.76);
+}
+.kontaktEmail__containerbox_eins {
+    width: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.kontaktEmail__containerbox_zwei {
+    width: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@media screen and (min-width:1040px)  {
+
+.kontaktEmail__containerbox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: row;
+}
+.kontaktEmail__containerbox input {
+    padding: 0.5rem;
+    width: 20rem;
+    border-radius: 9px;
+    border: none;
+    border: solid 1px rgba(0, 0, 0, 0.76);
+}
+.kontaktEmail__containerbox textarea {
+    padding: 0.5rem;
+    width: 20rem;
+    border-radius: 9px;
+    height: 5rem;
+    border: none;
+    border: solid 1px rgba(0, 0, 0, 0.76);
+}
+.kontaktEmail__containerbox_eins {
+    width: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.kontaktEmail__containerbox_zwei {
+    width: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+}
+
+/* -------------------------------------------- kontaktEmail__containerbox */
