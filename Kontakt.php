@@ -17,18 +17,17 @@
   <div class="container_3">
     <div class="container_3_box1">
       <h1>Kontakt</h1>
-      <h4>EcoStyle</h4>
       <p>Maria Goller</p>
-      <h4>Tel: </h4>
-      <p>+43 123 1234</p>
-      <h4>E-Mail: </h4>
+      <p>Tel: +43 123 1234</p>
       <p>ecoStyle@gmail.com</p>
+      <h3>EcoStyle</h3>
     </div>
     <div class="container_3_box2">
       <img src="img/MariaGoller.jpg" alt="">
     </div>
     <div class="container_3_box3">
-      <h4>Altstadt</h4>
+      <h2>Adresse</h2>
+      <h3>Altstadt</h3>
       <p>Herzog-Friedrich-Straße 5.</p>
       <p>6020 Innsbruck</p>
     </div>

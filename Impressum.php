@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-    <title>Impressum</title>
-    <link rel="stylesheet" href="css/Impressum_Datenschutz.css">
-    <?php include 'head.php'; ?>
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
 <header>
-    <?php include 'menu.php'; ?>
+<?php include 'menu.php'; ?>
 </header>
 
-
-<div class="Impressum__h1">
-            <h1>Impressum EcoStyle</h1>
-        </div>
-        <p class="Impressum__p">
+<div class="container_1">
+  <div class="container_1_box1">
+      
+  <h1>Impressum EcoStyle</h1>
+            <p class="Impressum__p">
             Hotline: 0800 298 531 <br>
             (kostenlos aus dem Festnetz der TAAG)<br>
             <br>
@@ -53,10 +49,13 @@
             und den Verwaltungsrat gemäß Artikel 11 des Gesetzes über digitale Dienste, abrufbar hier. <br>
             Kommunikation auf Englisch und Deutsch möglich.<br>
             <br>
-        </p>
+            </p>
+  </div>
+</div>
 
-<?php include 'footer.php'; ?>
-<script src="js/bootstrap.min.js"></script>
+
+
+    <?php include 'footer.php'; ?>
+
 </body>
-
 </html>

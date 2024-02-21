@@ -30,9 +30,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
             $gesamtsumme = htmlspecialchars($_POST['gesamtsumme']);
             $versandoption = htmlspecialchars($_POST['versandoption']);
             $versandtext = $versandoption === 'liefern' ? 'Lieferung' : 'Im Geschäft abholen';
-
+   
         }
     }
+
 
     try {
         $mail = new PHPMailer(true);
@@ -43,6 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = "tls";
         $mail->Port = 587;
+        $mail->addEmbeddedImage('img/logoBlack.png', 'logo_id', 'logoBlack.png');
         $mail->Username = "wiastud-newsletter";
         $mail->Password = "45YerkaidaAsaef5Kiap";
         $mail->setFrom("stud-newsletter@wda-innsbruck.at", "Eco Style");
@@ -62,9 +64,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                         . "<br>"
                         . "E-Mail: " . $email . "<br><br>"
                         . "Nachricht: " . $nachricht . "<br><br>"
-                        . "<h4>Ausgewählte Artikel:</h4>" . $ausgewaehlteArtikelHtml // Hier fügen Sie die ausgewählten Artikel ein
+                        . "<h4>Ausgewählte Artikel:</h4>" . $ausgewaehlteArtikelHtml 
                         . "<h3>Versandoption:</h3> " . $versandtext . "<br><br>"
-                        . "<h3>Gesamtsumme:</h3> " . $gesamtsumme . " " . "€";
+                        . "<h3>Gesamtsumme:</h3> " . $gesamtsumme . " " . "€" . "<br>" . "<br>" . "<img src='cid:logo_id' alt='Logo'>";
 ?>
 
 <!DOCTYPE html>
