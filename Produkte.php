@@ -10,16 +10,17 @@
 
 <body>
 
-<header>
 <?php include 'menu.php'; ?>
-</header>
 
+  <div class="container_h1">
+      <div class="container_box1_h1"><h1>Produkte</h1></div>
+  </div>
 
-  <div class="container_produkte">
-    <div class="container_produkte_box1">
+  <div class="container_produkte_left">
+    <div class="container_produkte_box1_left">
       <img src="img/Handtasche.jpg" alt="">
     </div>
-    <div class="container_produkte_box2">
+    <div class="container_produkte_box2_left">
       <h2>Handtasche Rosa</h2>
       <p>Tauchen Sie ein in die Welt der nachhaltigen Eleganz mit unserer handgefertigten Eco-Handtasche. Gefertigt aus
         umweltfreundlichen Materialien, präsentiert sie sich als stilvolles Statement für bewussten Konsum. Jeder
@@ -38,8 +39,8 @@
     </div>
   </div>
 
-  <div class="container_produkte">
-    <div class="container_produkte_box2">
+  <div class="container_produkte_right">
+    <div class="container_produkte_box2_right">
       <h2>Handtasche Grün</h2>
       <p>Entdecken Sie nachhaltige Raffinesse mit unserer handgefertigten Eco-Handtasche. Hergestellt aus
         umweltfreundlichen Materialien, präsentiert sie sich als stilvolles Bekenntnis zu bewusstem Konsum. Jeder
@@ -51,7 +52,7 @@
         Ausstrahlung betont.</p>
       <h3 class="end">120 €</h3>
     </div>
-    <div class="container_produkte_box1">
+    <div class="container_produkte_box1_right">
       <img src="img/Handtaschezwei.jpg" alt="">
     </div>
   </div>
@@ -62,11 +63,11 @@
     </div>
   </div>
 
-  <div class="container_produkte">
-    <div class="container_produkte_box1">
+  <div class="container_produkte_left">
+    <div class="container_produkte_box1_left">
       <img src="img/strumpfhose.jpg" alt="">
     </div>
-    <div class="container_produkte_box2">
+    <div class="container_produkte_box2_left">
       <h2>Strumpfhose Lila</h2>
       <p>Tauchen Sie ein in nachhaltige Eleganz mit unserer Eco-Strumpfhose. Die außergewöhnlichen Farben verleihen
         jedem Outfit einen Hauch von Glamour. Hergestellt aus umweltfreundlichen Materialien, vereint dieses Accessoire
@@ -84,8 +85,8 @@
     </div>
   </div>
 
-  <div class="container_produkte">
-    <div class="container_produkte_box2">
+  <div class="container_produkte_right">
+    <div class="container_produkte_box2_right">
       <h2>Strumpfhose Rosa</h2>
       <p>Erleben Sie nachhaltige Mode mit unserer handgefertigten Eco-Strumpfhose im bunten Design. Hergestellt aus
         umweltfreundlichen Materialien, vereint sie Stil und Nachhaltigkeit. Jeder einzelne Faden erzählt von unserer
@@ -96,7 +97,7 @@
         mit Stolz und setzen Sie ein Zeichen für nachhaltige Eleganz in Ihrem Kleiderschrank.</p>
       <h3 class="end">50 €</h3>
     </div>
-    <div class="container_produkte_box1">
+    <div class="container_produkte_box1_right">
       <img src="img/strumpfhosezwei.jpg" alt="">
     </div>
   </div>
@@ -107,11 +108,11 @@
     </div>
   </div>
 
-  <div class="container_produkte">
-    <div class="container_produkte_box1">
+  <div class="container_produkte_left">
+    <div class="container_produkte_box1_left">
       <img src="img/kleid.jpg" alt="">
     </div>
-    <div class="container_produkte_box2">
+    <div class="container_produkte_box2_left">
       <h2>Kleid Fee</h2>
       <p>Entdecken Sie nachhaltige Eleganz mit unserem handgefertigten Eco-Kleid. Hergestellt aus umweltfreundlichen
         Materialien, präsentiert es sich als stilvolles Statement für bewussten Konsum. Jeder sorgfältige Schnitt und
@@ -130,8 +131,8 @@
     </div>
   </div>
 
-  <div class="container_produkte">
-    <div class="container_produkte_box2">
+  <div class="container_produkte_right">
+    <div class="container_produkte_box2_right">
       <h2>Kleid Weiß Blau</h2>
       <p>Entdecken Sie nachhaltige Eleganz mit unserem handgefertigten Eco-Kleid. Hergestellt aus umweltfreundlichen
         Materialien, präsentiert es sich als stilvolles Statement für bewussten Konsum. Jeder sorgfältige Schnitt und
@@ -142,7 +143,7 @@
         Umweltbewusstsein, der Ihren individuellen Look unterstreicht.</p>
       <h3 class="end">180 €</h3>
     </div>
-    <div class="container_produkte_box1">
+    <div class="container_produkte_box1_right">
       <img src="img/kleidzwei.jpg" alt="">
     </div>
   </div>
@@ -153,8 +154,8 @@
     </div>
   </div>
 
-  <div class="container_produkte">
-    <div class="container_produkte_box2">
+  <div class="container_produkte_left">
+    <div class="container_produkte_box2_left">
       <h2>Pullover</h2>
       <p>Entdecken Sie Wärme und Stil in unserem handgefertigten Eco-Strickpullover. Hergestellt aus nachhaltigen
         Materialien, verkörpert er höchste Handwerkskunst. Jeder Strick, jeder Knoten erzählt von der Hingabe zum
@@ -164,7 +165,7 @@
         Eco-Strickpullover mit Stolz und setzen Sie ein Statement für nachhaltige Mode.</p>
       <h3 class="end">150 €</h3>
     </div>
-    <div class="container_produkte_box1">
+    <div class="container_produkte_box1_left">
       <img src="img/Pullover.jpg" alt="">
     </div>
   </div>
@@ -175,8 +176,8 @@
     </div>
   </div>
 
-  <div class="container_produkte">
-    <div class="container_produkte_box2">
+  <div class="container_produkte_right">
+    <div class="container_produkte_box2_right">
       <h2>Rollkragen Pullover</h2>
       <p>Erleben Sie Gemütlichkeit und Nachhaltigkeit mit unserem einzigartigen handgefertigten Eco-Strickpullover.
         Sorgfältig aus umweltfreundlichen Materialien gestrickt, vereint er Wärme und Stil auf harmonische Weise. Jeder
@@ -187,7 +188,7 @@
         Handwerks und ein Ausdruck Ihres Engagements für eine grünere Zukunft.</p>
       <h3 class="end">120 €</h3>
     </div>
-    <div class="container_produkte_box1">
+    <div class="container_produkte_box1_right">
       <img src="img/PulloverRollkragen.jpg" alt="">
     </div>
   </div>
@@ -198,8 +199,8 @@
     </div>
   </div>
 
-  <div class="container_produkte">
-    <div class="container_produkte_box2">
+  <div class="container_produkte_left">
+    <div class="container_produkte_box2_left">
       <h2>Halskette Perlen</h2>
       <p>Entdecken Sie Eleganz und Umweltbewusstsein mit unserer handgefertigten Eco-Halskette. Jedes einzelne Element
         wurde mit Sorgfalt und Liebe zum Detail aus nachhaltigen Materialien gefertigt. Das individuelle Design und die
@@ -209,7 +210,7 @@
         Eco-Halskette mit Stolz und setzen Sie ein Zeichen für Umweltfreundlichkeit und Eleganz.</p>
       <h3 class="end">90 €</h3>
     </div>
-    <div class="container_produkte_box1">
+    <div class="container_produkte_box1_left">
       <img src="img/ketteeins.jpg" alt="">
     </div>
   </div>
@@ -220,8 +221,8 @@
     </div>
   </div>
 
-  <div class="container_produkte">
-    <div class="container_produkte_box2">
+  <div class="container_produkte_right">
+    <div class="container_produkte_box2_right">
       <h2>Halskette Schmetterling</h2>
       <p>Tauchen Sie ein in die Welt der Nachhaltigkeit mit unserer einzigartigen handgefertigten Eco-Halskette. Jedes
         Glied erzählt eine Geschichte von umweltbewusster Handwerkskunst und Liebe zum Detail. Hergestellt aus
@@ -231,7 +232,7 @@
         Eco-Halskette mit Stolz und setzen Sie ein Statement für nachhaltigen Schmuck.</p>
       <h3 class="end">80 €</h3>
     </div>
-    <div class="container_produkte_box1">
+    <div class="container_produkte_box1_right">
       <img src="img/kettezwei.jpg" alt="">
     </div>
   </div>
@@ -242,6 +243,7 @@
     </div>
   </div>
 
+
   <div class="container_2">
     <div class="container_2_box1">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, labore? Accusamus fugit eaque ipsa
@@ -250,7 +252,7 @@
         hic cum similique! Quasi.</p>
     </div>
     <div class="container_2_box2">
-      <a href="#"><button>zu unserem Shop</button></a>
+      <a href="shop.php"><button>zu unserem Shop</button></a>
     </div>
   </div>
 

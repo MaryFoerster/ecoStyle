@@ -75,7 +75,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danke!</title>
-    <link rel="stylesheet" href="css/danke.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .container_danke {
+            width:80%;
+            height:30rem;
+            display: flex;
+            padding:2rem;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top:1rem;
+        }
+        .container_danke img {
+            height: 3rem;
+            width: 3rem;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
 
@@ -84,14 +101,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
         $mail->send();
             echo "<h1>Danke, $vorname!</h1><h3>Wir haben Ihre Bestellung erhalten und werden uns bald bei Ihnen melden.</h3>";
         } catch (Exception $e) {
-            echo "Ihre Nachricht konnte leider nicht versendet werden. Fehler: {$mail->ErrorInfo}";
+            echo "<h3>Ihre Nachricht konnte leider nicht versendet werden. Fehler:</h3> {$mail->ErrorInfo}";
         }
         } else {
             header('Location: index.php');
             exit;
         }?>
-    </div>
+        <a href="index.php"><button>Home</button></a>
     <img src="img/logoBlack.png" alt="">
+    </div>
     
 </body>
 </html>

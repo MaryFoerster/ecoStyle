@@ -9,135 +9,127 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <?php include 'menu.php'; ?>
-    </header>
+
+<?php include 'menu.php'; ?>
+
+
     <main>
         <?php include 'artikel.php'; ?>
 
-        <div class="container">
-            <h1>Shop</h1>
-        </div>
-        <div class="container">
-            <div class="shop__container_list">
-                <div class="shop__item_list"><p>Produkt</p></div>
-                <div class="shop__item_list"><p>Preis</p></div>
-                <div class="shop__item_list"><p>Menge</p></div>
-                <div class="shop__item_list"><p>Gesamtpreis</p></div>
-            </div>
-        </div>
-
-        <div class="container">
+        <div class="shop_container_alle1">
             <form id="bestellformular" method="post" action="formular_danke.php">
                 <!-- Artikel-Liste -->
                 <?php for ($i = 0; $i < count($artikel); $i++) { ?>
-                <div class="shop__container">
-                    <div class="shop__item">
-                        <img src="<?php echo $images[$i]; ?>" alt="<?php echo $artikel[$i]; ?>">
+                    <div class="container_onlineShop">
+                        <div class="onlineShop__item1">
+                            <img src="<?php echo $images[$i]; ?>" alt="<?php echo $artikel[$i]; ?>">
+                        </div>
+                        <div class="onlineShop__item2">
+                            <h3><?php echo $artikel[$i]; ?></h3>
+                        </div>
+                        <div class="onlineShop__item3">
+                            <h5 id='artikelpreis_<?php echo $i; ?>' data-preis='<?php echo $preis[$i]; ?>'>
+                                <?php echo number_format($preis[$i], 2, ',', '.'); ?> €
+                            </h5>
+                        </div>
+                        <div class="onlineShop__item4">
+                            <input id='artikelanzahl_<?php echo $i; ?>' type="number" value='0' min='0' name='artikelanzahl[<?php echo $i; ?>]' onchange="updateGesamtsumme()">
+                        </div>
+                        <div class="onlineShop__item5">
+                            <p id='artikelsumme_<?php echo $i; ?>'>0,00 €</p>
+                        </div>
                     </div>
-                    <div class="shop__item">
-                        <h3><?php echo $artikel[$i]; ?></h3>
-                    </div>
-                    <div class="shop__item">
-                        <h5 id='artikelpreis_<?php echo $i; ?>' data-preis='<?php echo $preis[$i]; ?>'>
-                            <?php echo number_format($preis[$i], 2, ',', '.'); ?> €
-                        </h5>
-                    </div>
-                    <div class="shop__item">
-                        <input id='artikelanzahl_<?php echo $i; ?>' type="number" value='0' min='0' name='artikelanzahl[<?php echo $i; ?>]' onchange="updateGesamtsumme()">
-                    </div>
-                    <div class="shop__item">
-                        <p id='artikelsumme_<?php echo $i; ?>'>0,00 €</p>
-                    </div>
-                </div>
                 <?php } ?>
+        </div>
 
-
-                <div class="shop__container2container">
-                    <div class="shop__container2">
-                        <!-- Versandoptionen -->
-                        <div class="shop__item3">
-                            <label for="option1"><p>Im Geschäft abholen</p></label>
-                        </div>
-                        <div class="shop__item4">
-                            <input id="option1" type="radio" name="versandoption" value="abholen" checked onchange="updateGesamtsumme()">
-                        </div>
-                        <div class="shop__item3">
-                            <label for="option2"><p>Lieferung 5,90 €<br>*Lieferung ab 100 € Einkaufswert gratis</p></label>
-                        </div>
-                        <div class="shop__item4">
-                            <input id="option2" type="radio" name="versandoption" value="liefern" onchange="updateGesamtsumme()">
-                        </div>
-                    </div>
-
-                    <div class="shop__container2">
+                <div class="shop_container_alle2">
+                    <div class="container_onlineShop2">
                         <!-- Preisübersicht -->
-                        <div class="shop__item2">
+                        <div class="shop__item2_1">
                             <p>Nettosumme</p>
                             <p id="nettosumme">0,00 €</p>
                         </div>
-                        <div class="shop__item2">
+                        <div class="shop__item2_2">
                             <p>Mehrwertsteuer (19%)</p>
                             <p id="mwstsumme">0,00 €</p>
                         </div>
-                        <div class="shop__item2">
+                        <div class="shop__item2_3">
                             <p>Gesamtsumme</p>
                             <p id="bruttosumme">0,00 €</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Verstecktes Feld für die Gesamtsumme -->
+
+
+
+
+
+
+
+
+                <h2>Bestellformular</h2>
+
                 <input type="hidden" id="gesamtsummeInput" name="gesamtsumme" value="0">
 
-                <!-- Kontaktformular -->
-                <div class="kontakt__containerbox_zwei">
-                    <!-- Kontaktinformationen und Nachricht -->
-                    <h3>Tritt mit uns in Kontakt</h3>
+                <div class="kontaktEmail__containerbox">
+                    <div class="kontaktEmail__containerbox_eins">
+                        <label for="vorname"><p>Vorname</p></label>
+                        <br>
+                        <input type="text" id="vorname" placeholder="Vorname" name="vorname"  required> 
+                        <br>
+                        <label for="nachname"><p>Nachname</p></label>
+                        <br>
+                        <input type="text" id="nachname" placeholder="Nachname" name="nachname"  required> 
+                        <br>
+                        <label for="email"><p>e-mail</p></label>
+                        <br>
+                        <input type="email" id="email" placeholder="e-mail" name="email"  required>
+                        <br>
+                        <label for="strasse"><p>Straße</p></label>
+                        <br>
+                        <input type="text" id="strasse" placeholder="Straße" name="strasse"  required>
+                        <br>
+                        <label for="hausnummer"><p>Hausnummer</p></label>
+                        <br>
+                        <input type="text" id="hausnummer" name="hausnummer" placeholder="Hausnummer" required>
+                        <br>
+                        <label for="ort"><p>Ort</p></label>
+                            <br>
+                            <input type="text" id="ort" placeholder="Ort" name="ort" required> 
+                            <br>
+                    </div>
 
-                    <!-- Weitere Formularelemente -->
-                    <label for="vorname">Vorname</label>
-                    <input type="text" id="vorname" name="vorname"  required> 
-                    <br>
-                    <br>
-                    <label for="nachname">Nachname</label>
-                    <input type="text" id="nachname" name="nachname"  required> 
-                    <br>
-                    <br>
-                    <label for="email">email</label>
-                    <input type="email" id="email" name="email"  required>
-                    <br>
-                    <br>
-                    <label for="strasse">Straße</label>
-                    <input type="text" id="strasse" name="strasse"  required> 
-                    <br>
-                    <br>
-                    <label for="hausnummer">hausnummer</label>
-                    <input type="text" id="hausnummer" name="hausnummer"  required>
-                    <br>
-                    <br>
-                    <label for="ort">Ort</label>
-                    <input type="text" id="ort" name="ort" required> 
-                    <br>
-                    <br>
-                    <label for="plz">PLZ</label>
-                    <input type="text" id="plz" name="plz" required> 
-                    <br>
-                    <br>
-                    <label for="nachricht">nachricht</label>
-                    <textarea id="nachricht" name="nachricht" placeholder="nachricht"  required></textarea>
-                    <br>
-                    <br>
-                    <input type="checkbox" id="dsgvo-check" name="dsgvo-check" required>
-                    <label for="dsgvo-check">Ich stimme der DSGVO zu</label>
-                    <br>
-                    <br><br>
-                    <button type="submit" name="submit">Bestellung absenden</button>
-                </div>
+                        <div class="kontaktEmail__containerbox_zwei">
+                            <label for="plz"><p>PLZ</p></label>
+                            <br>
+                            <input type="text" id="plz" placeholder="PLZ" name="plz" required> 
+                            <br><br>
+                            <label for="option1"><p>Im Geschäft abholen</p></label>
+                            <input id="option1" type="radio" name="versandoption" value="abholen" checked onchange="updateGesamtsumme()">
+                            <br>
+                            <label for="option2"><p>Lieferung 5,90 €</p><p>*Lieferung ab 100 € Einkaufswert gratis</p></label>
+                            <input id="option2" type="radio" name="versandoption" value="liefern" onchange="updateGesamtsumme()">
+                            <br>
+                            <br>
+                            <label for="nachricht"><p>Nachricht</p></label>
+                            <br>
+                            <textarea id="nachricht" name="nachricht" placeholder="nachricht"  required></textarea>
+                            <br>
+                            <label for="dsgvo-check"><p>Ich stimme der DSGVO zu</p></label>
+                            <br>
+                            <input type="checkbox" id="dsgvo-check" name="dsgvo-check" required>
+                            <br>
+                            <button type="submit" name="submit">Bestellung absenden</button>
+                    </div>
+                </div>  
+
             </form>
-        </div>
     </main>
+
     <?php include 'footer.php'; ?>
+
+
     <script>
         function updateGesamtsumme() {
     let gesamtNetto = 0;

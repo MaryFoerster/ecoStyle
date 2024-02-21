@@ -12,37 +12,11 @@
 <?php include 'menu.php'; ?>
 </header>
 
-<ul>
-  <li>
-    <a href="#">
-      <i class="fab fa-edge"></i>
-    </a>
-  </li>
-  <li>
-    <a href="#">
-      <i class="fab fa-firefox"></i>
-    </a>
-    </li>
-  <li>
-    <a href="#">
-      <i class="fab fa-chrome"></i>
-    </a>
-    
-  </li>
-  <li>
-    <a href="#">
-      <i class="fab fa-opera"></i>
-    </a> 
-  </li>
-</ul>
-
-
 <div class="container_1">
   <div class="home__header">
       <img src="images/frühling.jpg" alt="Bild des aktuellen Monats"> 
   </div>
 </div>
-
 
   <div class="container_3">
     <div class="container_3_box1">
@@ -67,7 +41,7 @@
         Hier finden Sie nicht nur Mode, sondern eine Ode an die Schönheit der Natur und die Kunst der nachhaltigen Gestaltung. Genießen Sie eine einzigartige Shopping-Erfahrung, die nicht nur Ihren persönlichen Stil unterstreicht, sondern auch einen positiven Beitrag zu unserer Welt leistet.</p>
     </div>
     <div class="container_2_box2">
-      <a href="#"><button>zu unseren Produkten</button></a>
+      <a href="Produkte.php"><button>zu unseren Produkten</button></a>
     </div>
   </div>
 
