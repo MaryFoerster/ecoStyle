@@ -10,9 +10,7 @@
 
 <body>
 
-
     <?php include 'menu.php'; ?>
-
 
   <div class="container_h1">
       <div class="container_box1_h1"></div>
@@ -48,5 +46,4 @@
   <?php include 'footer.php'; ?>
 
 </body>
-
 </html>

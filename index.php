@@ -32,7 +32,6 @@
     </div>
   </div>
 
-
   <div class="container_2">
     <div class="container_2_box1">
       <h1>Eco Style</h1>

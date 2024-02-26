@@ -12,28 +12,25 @@ require 'src/PHPMailer/SMTP.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
 
+    $vorname = htmlspecialchars($_POST['vorname']);
+    $nachname = htmlspecialchars($_POST['nachname']);
+    $email = htmlspecialchars($_POST['email']);
+    $strasse = htmlspecialchars($_POST['strasse']);
+    $hausnummer = htmlspecialchars($_POST['hausnummer']);
+    $ort = htmlspecialchars($_POST['ort']);
+    $plz = htmlspecialchars($_POST['plz']);
+    $nachricht = htmlspecialchars($_POST['nachricht']);
+    $gesamtsumme = htmlspecialchars($_POST['gesamtsumme']);
+    $versandoption = htmlspecialchars($_POST['versandoption']);
+    $versandtext = $versandoption === 'liefern' ? 'Lieferung' : 'Im Geschäft abholen';
 
     foreach ($_POST['artikelanzahl'] as $index => $anzahl) {
         if ($anzahl > 0) {
             $artikelName = $artikel[$index];
-            $artikelimages = $images[$index];
             $artikelpreis = $preis[$index];
-           $ausgewaehlteArtikelHtml .= $artikelimages . $artikelName . " - Menge: " . $anzahl . " - Preis Einzeln: " . $artikelpreis . " " . "€" . "<br>" . "<br>";
-            $vorname = htmlspecialchars($_POST['vorname']);
-            $nachname = htmlspecialchars($_POST['nachname']);
-            $email = htmlspecialchars($_POST['email']);
-            $strasse = htmlspecialchars($_POST['strasse']);
-            $hausnummer = htmlspecialchars($_POST['hausnummer']);
-            $ort = htmlspecialchars($_POST['ort']);
-            $plz = htmlspecialchars($_POST['plz']);
-            $nachricht = htmlspecialchars($_POST['nachricht']);
-            $gesamtsumme = htmlspecialchars($_POST['gesamtsumme']);
-            $versandoption = htmlspecialchars($_POST['versandoption']);
-            $versandtext = $versandoption === 'liefern' ? 'Lieferung' : 'Im Geschäft abholen';
-   
+            $ausgewaehlteArtikelHtml .= $artikelimages . " " . $artikelName . " - Menge: " . $anzahl . " - Preis Einzeln: " . $artikelpreis . " " . "€" . "<br>" . "<br>";
         }
     }
-
 
     try {
         $mail = new PHPMailer(true);
@@ -52,11 +49,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
         $mail->addCC('lisamari9500@gmail.com', "Mary Förster");
         $mail->isHTML(true);
         $mail->Subject = "Bestellbestätigung";
-        $mail->Body    = "<h2>Bestellung von:</h2>" . $vorname . " " . $nachname . "<br>"
+        $mail->Body    = "<body style='background-color: #ffffff; padding:10px; border: radius 10px;;'>" . "<h2>Bestellung von:</h2>" . $vorname . " " . $nachname . "<br>"
                         . "Der DSGVO wurde zugestimmt!" . "<br>"
                         . "<h4>Adresse:</h4>"
                         . "Straße: " . $strasse
-                        . "<br>" 
                         . "Nr: " . $hausnummer
                         . "<br>" 
                         . "PLZ: " . $plz . " "
@@ -66,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                         . "Nachricht: " . $nachricht . "<br><br>"
                         . "<h4>Ausgewählte Artikel:</h4>" . $ausgewaehlteArtikelHtml 
                         . "<h3>Versandoption:</h3> " . $versandtext . "<br><br>"
-                        . "<h3>Gesamtsumme:</h3> " . $gesamtsumme . " " . "€" . "<br>" . "<br>" . "<img src='cid:logo_id' alt='Logo'>";
+                        . "<h3>Gesamtsumme:</h3> " . $gesamtsumme . " " . "€" . "<br>" . "<br>" . "<br>" . "<img src='cid:logo_id' alt='Logo' style='width: 100px; height: 100px;'>";
 ?>
 
 <!DOCTYPE html>

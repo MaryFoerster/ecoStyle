@@ -12,13 +12,11 @@
 
 <?php include 'menu.php'; ?>
 
-
     <main>
         <?php include 'artikel.php'; ?>
 
         <div class="shop_container_alle1">
             <form id="bestellformular" method="post" action="formular_danke.php">
-                <!-- Artikel-Liste -->
                 <?php for ($i = 0; $i < count($artikel); $i++) { ?>
                     <div class="container_onlineShop">
                         <div class="onlineShop__item1">
@@ -44,7 +42,6 @@
 
                 <div class="shop_container_alle2">
                     <div class="container_onlineShop2">
-                        <!-- Preisübersicht -->
                         <div class="shop__item2_1">
                             <p>Nettosumme</p>
                             <p id="nettosumme">0,00 €</p>
@@ -59,14 +56,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
 
                 <h2>Bestellformular</h2>
 
@@ -129,7 +118,6 @@
 
     <?php include 'footer.php'; ?>
 
-
     <script>
         function updateGesamtsumme() {
     let gesamtNetto = 0;
@@ -145,7 +133,6 @@
     let mwst = gesamtNetto * 0.19;
     let bruttosumme = gesamtNetto + mwst;
 
-    // Versandkosten hinzufügen, falls notwendig
     let versandOption = document.querySelector('input[name="versandoption"]:checked').value;
     let versandKosten = 0;
     if (versandOption === "liefern" && gesamtNetto < 100) {
@@ -154,16 +141,13 @@
 
     bruttosumme += versandKosten;
     
-    // Update der Anzeige im Formular
     document.getElementById('nettosumme').innerText = gesamtNetto.toFixed(2).replace('.', ',') + ' €';
     document.getElementById('mwstsumme').innerText = mwst.toFixed(2).replace('.', ',') + ' €';
     document.getElementById('bruttosumme').innerText = bruttosumme.toFixed(2).replace('.', ',') + ' €';
 
-    // Update des versteckten Feldes für die Gesamtsumme
     document.getElementById('gesamtsummeInput').value = bruttosumme.toFixed(2);
 }
 
-// EventListener für die Initialisierung beim Laden der Seite und bei Änderungen
 document.addEventListener('DOMContentLoaded', updateGesamtsumme);
 const inputs = document.querySelectorAll('input');
 inputs.forEach(input => input.addEventListener('change', updateGesamtsumme));
